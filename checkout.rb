@@ -5,14 +5,14 @@ class Checkout
 
   def initialize(promotional_rules = {})
     @promotional_rules = promotional_rules                                   # Initializes the promotional rules that may be applied
-    @articles = {1 => {:name => "Lavender heart", :price => 9.25},           # for the checkout
-                 2 => {:name => "Personalised cufflinks", :price => 45.00},  
-                 3 => {:name => "Kids T-shirt", :price => 19.95}}            # Initializes the articles in the shop
+    @articles = {"001" => {:name => "Lavender heart", :price => 9.25},           # for the checkout
+                 "002" => {:name => "Personalised cufflinks", :price => 45.00},  
+                 "003" => {:name => "Kids T-shirt", :price => 19.95}}            # Initializes the articles in the shop
     @items = []
   end
 
   def scan(item)
-    @items << items                                                         # Adds the key of every item to an array of keys
+    @items << item                                                          # Adds the key of every item to an array of keys
   end                                                                       # of scanned items
 
   def total()
