@@ -35,6 +35,6 @@ class Checkout
         end
       end
     end
-    total
+    total.round(2)
   end
 end
