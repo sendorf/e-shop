@@ -13,13 +13,13 @@ describe Checkout, "#Basket 1" do
 end
 
 describe Checkout, "#Basket 2" do
-  it "The result should be 36,95." do
+  it "The result should be 36.95." do
     promotional_rules = {"rule1" => {:cond => "total >= 60", :result => "total = total - (total*10/100)"},
-                         "rule2" => {:cond => '@items.count("001") >= 2', :result => '@articles["001"][:price] = 8.50'}}
+                         "rule2" => {:cond => '@items.count("001") >= 2', :result => '@articles["001"] = {:name => "Lavender heart", :price => 8.50}'}}
     co = Checkout.new(promotional_rules)
     co.scan("001")
     co.scan("003")
     co.scan("001")
-    co.total.should eq(36,95)
+    co.total.should eq(36.95)
   end
 end
