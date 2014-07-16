@@ -8,7 +8,7 @@ describe Checkout, "#Basket 1" do
     co.scan("001")
     co.scan("002")
     co.scan("003")
-    co.total.should eq(66.78)
+    expect(co.total).to eq(66.78)
   end
 end
 
@@ -20,7 +20,7 @@ describe Checkout, "#Basket 2" do
     co.scan("001")
     co.scan("003")
     co.scan("001")
-    co.total.should eq(36.95)
+    expect(co.total).to eq(36.95)
   end
 end
 
@@ -33,6 +33,6 @@ describe Checkout, "#Basket 3" do
     co.scan("002")
     co.scan("001")
     co.scan("003")
-    co.total.should eq(73.76)
+    expect(co.total).to eq(73.76)
   end
 end

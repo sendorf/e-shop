@@ -1,4 +1,4 @@
-ruby '1.9.2'
+ruby '2.1.1'
 
 gem 'rspec'
 gem 'rake'
