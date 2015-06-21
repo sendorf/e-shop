@@ -1,3 +1,3 @@
-task :rspec do |t|
-  sh 'rspec Rspec/checkout_spec.rb'
+task :spec do |t|
+  sh 'rspec --pattern spec/**/*_spec.rb'
 end

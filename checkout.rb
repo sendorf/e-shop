@@ -5,9 +5,9 @@ class Checkout
 
   def initialize(promotional_rules = {})
     @promotional_rules = promotional_rules                                   # Initializes the promotional rules that may be applied
-    @articles = {"GR1" => {:name => "Green tea", :price => 3.11},           # for the checkout
-                 "SR1" => {:name => "Strawberries", :price => 5.00},  
-                 "CF1" => {:name => "Coffee", :price => 11.23}}            # Initializes the articles in the shop
+    @articles = {"AM" => {:name => "Agua mineral", :price => 3.11},           # for the checkout
+                 "AC" => {:name => "Aceite", :price => 5.00},  
+                 "CA" => {:name => "Café", :price => 11.23}}            # Initializes the articles in the shop
     @items = []
   end
 

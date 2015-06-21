@@ -7,7 +7,7 @@ Imagina que estamos implementando una tienda online, que vende solo 3 productos:
 |--------------|------------------------|------------------
 |AM            | Agua mineral           |   3.11€
 |AC            | Aceite                 |   5.00€
-|CA            | Cafe                   |  11.23€
+|CA            | Café                   |  11.23€
  
 * El departamento de marketing es fan de las promociones de tipo 2x1 (si compras dos productos iguales, uno de ellos es gratis). Y quiere que haya un descuento de este tipo en Agua mineral.
 * El CEO cree que lo mejor para aumentar las ventas es agregar descuentos por cantidad (al comprar x de un mismo producto, el precio por unidad baja). Y quiere que al comprar 3 o mas aceites, el precio por unidad sea de 4.50€.
@@ -26,7 +26,7 @@ Implement a checkout system that fulfills these requirements.
  
 Ejemplos:
 ---------
- 
+
 Items: AM,AC,AM,AM,CA   
 Precio total esperado: 22.45€
 
