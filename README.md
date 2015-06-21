@@ -1,21 +1,20 @@
-Convenience Store
+E-Shop
 ===============
 
-We sell only three products:
+Imagina que estamos implementando una tienda online, que vende solo 3 productos:
 
-|Product code  | Name                   | Price
+|Código        | Nombre                 | Precio
 |--------------|------------------------|------------------
-|GR1           | Green tea              |   £3.11
-|SR1           | Strawberries           |   £5.00
-|CF1           | Coffee                 |  £11.23
+|AM            | Agua mineral           |   3.11€
+|AC            | Aceite                 |   5.00€
+|CA            | Cafe                   |  11.23€
  
-* The CEO is a big fan of buy-one-get-one-free offers and of green tea. He wants us to add a rule to do this.
-* The COO, though, likes low prices and wants people buying strawberries to get a price discount for bulk purchases. If you buy 3 or more strawberries, the price should drop to  £4.50
- 
+* El departamento de marketing es fan de las promociones de tipo 2x1 (si compras dos productos iguales, uno de ellos es gratis). Y quiere que haya un descuento de este tipo en Agua mineral.
+* El CEO cree que lo mejor para aumentar las ventas es agregar descuentos por cantidad (al comprar x de un mismo producto, el precio por unidad baja). Y quiere que al comprar 3 o mas aceites, el precio por unidad sea de 4.50€.
 
-Our check-out can scan items in any order, and because the CEO and COO change their minds often, it needs to be flexible regarding our pricing rules.
+El proceso de checkout permite escanear los productos en cualquier orden y debe devolver el total de la compra.
  
-The interface to our checkout looks like this (shown in ruby):
+La interfaz del proceso de checkout es así:
  
 ```Ruby
   co = Checkout.new(pricing_rules)
@@ -25,14 +24,14 @@ The interface to our checkout looks like this (shown in ruby):
 ```
 Implement a checkout system that fulfills these requirements.
  
-Test data
+Ejemplos:
 ---------
  
-Basket: GR1,SR1,GR1,GR1,CF1  
-Total price expected: £22.45
- 
-Basket: GR1,GR1  
-Total price expected: £3.11
- 
-Basket: SR1,SR1,GR1,SR1  
-Total price expected: £16.61
+Items: AM,AC,AM,AM,CA
+Precio total esperado: 22.45€
+
+Items: AM,AM
+Precio total esperado: 3.11€
+
+Items: AC,AC,AM,AC
+Precio total esperado: 16.61€
