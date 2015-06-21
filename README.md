@@ -27,11 +27,11 @@ Implement a checkout system that fulfills these requirements.
 Ejemplos:
 ---------
  
-Items: AM,AC,AM,AM,CA
+Items: AM,AC,AM,AM,CA   
 Precio total esperado: 22.45€
 
-Items: AM,AM
+Items: AM,AM   
 Precio total esperado: 3.11€
 
-Items: AC,AC,AM,AC
+Items: AC,AC,AM,AC    
 Precio total esperado: 16.61€
